@@ -11,11 +11,13 @@
 
 ### 🏠 [Homepage](https://github.com/biagruot/reusable-accordion-component)
 
-### ✨ [Demo](https://pedantic-neumann-1e631f.netlify.com/)
+### ✨ [Live Demo](https://pedantic-neumann-1e631f.netlify.com/)
 
-## Prerequisites
+## :mag: Prerequisites
 
-- node >=12.0.0
+```sh
+node >=12.0.0
+```
 
 ## :floppy_disk: Install dependencies
 
