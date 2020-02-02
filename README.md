@@ -16,10 +16,18 @@
 ## Folders structure
 
 ```sh
+├── LICENSE
+├── README.md
 ├── css
 │   ├── accordion.css
 │   ├── styles.css
 │   └── typography.css
+├── cypress
+│   ├── fixtures
+│   │   └── options.json
+│   ├── integration
+│   │   └── accordion.spec.js
+├── cypress.json
 ├── index.html
 ├── package.json
 └── src
