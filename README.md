@@ -13,13 +13,32 @@
 
 ### ✨ [Live Demo](https://pedantic-neumann-1e631f.netlify.com/)
 
+## Folders structure
+
+```sh
+├── css
+│   ├── accordion.css
+│   ├── styles.css
+│   └── typography.css
+├── index.html
+├── package.json
+└── src
+    ├── js
+    │   └── accordion.js
+    └── scss
+        ├── _typography.scss
+        ├── _variables.scss
+        ├── accordion.scss
+        └── styles.scss
+```
+
 ## :mag: Prerequisites
 
 ```sh
 node >=12.0.0
 ```
 
-## :floppy_disk: Install dependencies
+## :floppy_disk: Install
 
 ```sh
 npm install
