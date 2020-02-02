@@ -1,0 +1,138 @@
+@import 'typography';
+@import 'variables';
+
+.accordion {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: $grid-column-gap;
+  margin: 0 $grid-margin $grid-margin * 2 $grid-margin;
+
+  &__panel-container {
+    transition: margin 0.3s ease-in-out;
+    box-shadow: $accordion-box-shadow;
+    min-width: 0;
+    grid-column: span 1;
+
+    &--active {
+      margin: $space-between-panels 0;
+
+      .accordion {
+        &__content {
+          padding: $padding;
+          opacity: 1;
+        }
+
+        &__panel {
+          align-items: flex-end;
+        }
+
+        &__toggle-icon {
+          transform: rotate(180deg);
+        }
+
+        &__title {
+          font-size: $item-title-opened-font-size;
+        }
+      }
+    }
+  }
+
+  &__panel {
+    background-color: $accordion-bg-color;
+    border-top: $divider;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 $padding;
+    cursor: pointer;
+
+    &--with-desc {
+      min-height: $accordion-with-desc-min-height;
+    }
+
+    &--no-desc {
+      height: $accordion-no-desc-height;
+    }
+  }
+
+  &__main-title {
+    background-color: $accordion-bg-color;
+    font-size: $global-title-font-size;
+    font-weight: $global-title-font-weight;
+    color: $global-title-color;
+    text-transform: capitalize;
+    height: $main-title-panel-height;
+    display: flex;
+    align-items: center;
+    padding-left: $padding;
+    background-color: $accordion-bg-color;
+    box-shadow: $accordion-box-shadow;
+    grid-column: span 1;
+  }
+
+  &__title-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  &__title {
+    font-size: $item-title-font-size;
+    font-weight: $item-title-font-weight;
+    color: $item-title-color;
+    text-transform: capitalize;
+    transition: font-size 0.3s ease-in-out;
+  }
+
+  &__subtitle {
+    font-size: $item-subtitle-font-size;
+    font-weight: $item-subtitle-font-weight;
+    color: $item-subtitle-color;
+    margin-top: $space-between-title-subtitle;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__toggle-icon {
+    color: $toggle-icon-color;
+    font-size: $toggle-icon-size;
+    margin-left: $padding;
+    transition: all 0.3s ease-in;
+  }
+
+  &__content {
+    background-color: $accordion-bg-color;
+    font-size: $content-font-size;
+    font-weight: $content-font-weight;
+    color: $content-color;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+
+    * {
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 840px) {
+  .accordion {
+    grid-template-columns: repeat(8, 1fr);
+    &__panel-container,
+    &__main-title {
+      grid-column: span 8;
+    }
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .accordion {
+    grid-template-columns: repeat(12, 1fr);
+    &__panel-container,
+    &__main-title {
+      grid-column: span 12;
+    }
+  }
+}

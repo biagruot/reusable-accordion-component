@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Accordion demo page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/accordion.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script type="text/javascript" src="src/js/accordion.js"></script>
+</head>
+
+<body>
+    <h1>Accordion demo page</h1>
+    <div id="my-accordion"></div>
+    <div id="my-accordion2"></div>
+    
+    <script type="text/javascript">
+        var options = {
+            container: 'my-accordion',
+            mainTitle: 'Main accordion title', // optional
+            panels: [
+                {
+                    title: 'My profile',
+                    subtitle: 'Update your profile information', // optional
+                    content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>' // HTML to inject as panel content
+                },
+                {
+                    title: 'Change password',
+                    subtitle: 'Change your login password',
+                    content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>' // HTML to inject as panel content
+                },
+                {
+                    title: 'Preferences',
+                    subtitle: 'This is a long description that has to be limited to one row. Lorem ipsum dolor si amet.',
+                    content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>' // HTML to inject as panel content
+                },
+                {
+                    title: 'No description title',
+                    content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>' // HTML to inject as panel content
+                }
+            ]
+        };
+        var accordion = new Accordion(options);
+
+        var anotherOptions = {
+            container: 'my-accordion2',
+            panels: [
+                {
+                    title: 'My profile',
+                    content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>' // HTML to inject as panel content
+                },
+                {
+                    title: 'Change password',
+                    subtitle: 'Change your login password',
+                    content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>' // HTML to inject as panel content
+                },
+                {
+                    title: 'Preferences',
+                    subtitle: 'Set your language and timezone preferences',
+                    content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>' // HTML to inject as panel content
+                },
+                {
+                    title: 'No description title',
+                    content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>' // HTML to inject as panel content
+                }
+            ]
+        };
+        var anotherAccordion = new Accordion(anotherOptions);
+    </script>
+</body>
+
+</html>
