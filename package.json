@@ -1,7 +1,17 @@
 {
   "name": "reusable-accordion-component",
   "version": "1.0.0",
-  "description": "reusable-accordion-component",
+  "description": "Reusable accordion component. Made by Biagio Ruotolo for Docebo.",
+  "author": "Biagio Ruotolo",
+  "license": "UNLICENSED",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biagruot/reusable-accordion-component.git"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "main": "index.js",
   "scripts": {
     "scss": "node-sass --output-style compressed -o css src/scss",
@@ -9,7 +19,6 @@
     "watch:css": "onchange 'src/scss' -- npm run scss",
     "start": "run-p serve watch:css"
   },
-  "author": "Biagio Ruotolo",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "node-sass": "^4.13.1",
