@@ -13,6 +13,30 @@
 
 ### ✨ [Live Demo](https://pedantic-neumann-1e631f.netlify.com/)
 
+## :mag: Prerequisites
+
+```sh
+node >=12.0.0
+```
+
+## :floppy_disk: Install
+
+```sh
+npm install
+```
+
+## :rocket: Usage
+
+```sh
+npm run start
+```
+
+## :wrench: Run tests
+
+```sh
+npm run test
+```
+
 ## Folders structure
 
 ```sh
@@ -38,30 +62,6 @@
         ├── _variables.scss
         ├── accordion.scss
         └── styles.scss
-```
-
-## :mag: Prerequisites
-
-```sh
-node >=12.0.0
-```
-
-## :floppy_disk: Install
-
-```sh
-npm install
-```
-
-## :rocket: Usage
-
-```sh
-npm run start
-```
-
-## :wrench: Run tests
-
-```sh
-npm run test
 ```
 
 ## Author
