@@ -44,6 +44,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 $padding;
+    height: 0; // fix IE11 flexbox issue
     cursor: pointer;
 
     &--with-desc {

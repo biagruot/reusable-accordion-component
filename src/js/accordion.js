@@ -85,9 +85,8 @@ class Accordion {
      * @param {object} e - Element the click occured on.
      */
 	onClick(e) {
-		// look up the DOM tree from the current element and returns the closest ancestor with 'accordion__panel-container' class
-		const clickedElement = e.target.closest(`.${this.panelContainerClassName}`);
-		
+		const clickedElement = this.findAncestor(e.target, `${this.panelContainerClassName}`);
+
 		if (clickedElement) {
 			let clickedContentElement = clickedElement.getElementsByClassName(`${this.contentContainerClassName}`)[0];
 			this.toggleClickedPanel(clickedElement, clickedContentElement);
@@ -101,7 +100,7 @@ class Accordion {
 	 * @param {Object} clickedContentElement - The content panel to show or hide.
 	 */
 	toggleClickedPanel(clickedElement, clickedContentElement) {
-		if (clickedElement.classList.value.indexOf(`${this.panelContainerClassName}--active`) === -1) {
+		if (!clickedElement.classList.contains(`${this.panelContainerClassName}--active`)) {
 			this.closeAllPanels();
 		}
 
@@ -118,12 +117,25 @@ class Accordion {
 	 */
 	closeAllPanels() {
 		const accordionPanels = this.myAccordionContainer.getElementsByClassName(`${this.contentContainerClassName}`);
-		for (let panel of accordionPanels) {
+		for (let i = 0; i < accordionPanels.length; i++) {
+			const panel = accordionPanels[i];
 			panel.style.height = '0px';
 		}
 		let contents = this.myAccordionContainer.getElementsByClassName(`${this.panelContainerClassName}--active`);
-		for (let content of contents) {
+		for (let i = 0; i < contents.length; i++) {
+			const content = contents[i];
 			content.classList.remove(`${this.panelContainerClassName}--active`);
 		}
+	}
+
+	/**
+	 *  Loop until el has the desired class.
+	 *  Sets el to el's parent every iteration. 
+	 * 
+	 * @returns {HTMLElement} ancestor with the searched class or null
+	 */
+	findAncestor(el, cls) {
+		while ((el = el.parentElement) && !el.classList.contains(cls));
+		return el;
 	}
 }
