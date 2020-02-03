@@ -74,5 +74,4 @@ npm run test
 
 ## 📝 License
 
-Copyright © 2020 [Biagio Ruotolo](https://github.com/biagruot).<br />
 This project is [UNLICENSED](https://github.com/biagruot/reusable-accordion-component/blob/master/LICENSE) licensed.
