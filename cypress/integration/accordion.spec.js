@@ -1,7 +1,7 @@
 describe('Reusable accordion test', function() {
 
   it('Render the website', function() {
-    cy.visit('http://localhost:3000')
+    cy.visit('https://pedantic-neumann-1e631f.netlify.com')
   })
 
   it('Accordion should be defined', function() {
